@@ -37,7 +37,7 @@ class FlacFileTest < Test::Unit::TestCase
 
       should "contain basic information" do
         assert_equal 1, @properties.length
-        assert_equal 212, @properties.bitrate
+        assert_equal 209, @properties.bitrate
         assert_equal 44100, @properties.sample_rate
         assert_equal 1, @properties.channels
       end

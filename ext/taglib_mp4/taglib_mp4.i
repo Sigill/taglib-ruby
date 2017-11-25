@@ -5,6 +5,7 @@
 #include <taglib/mp4properties.h>
 #include <taglib/mp4tag.h>
 #include <taglib/mp4atom.h>
+using namespace TagLib::MP4;
 %}
 
 %ignore TagLib::List::operator!=;
@@ -59,6 +60,7 @@ TagLib::MP4::CoverArtList ruby_array_to_taglib_cover_art_list(VALUE ary) {
 %include <taglib/tmap.h>
 
 namespace TagLib {
+  class ByteVectorList;
   namespace MP4 {
     class Item;
     class CoverArtList;
@@ -93,6 +95,9 @@ namespace TagLib {
   $result = taglib_mp4_item_int_pair_to_ruby_array($1);
 }
 %ignore TagLib::MP4::Item::operator=;
+
+%ignore TagLib::MP4::Item::Item(const ByteVectorList &);
+%ignore TagLib::MP4::Item::toByteVectorList();
 
 %warnfilter(SWIGWARN_PARSE_NAMED_NESTED_CLASS) IntPair;
 %include <taglib/mp4item.h>

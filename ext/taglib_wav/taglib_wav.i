@@ -14,6 +14,13 @@
 %freefunc TagLib::RIFF::WAV::File "free_taglib_riff_wav_file";
 
 namespace TagLib {
+  namespace RIFF {
+    // Required for the InfoTag() method
+    namespace Info {
+      class Tag;
+    }
+  }
+
   namespace ID3v2 {
     class Tag;
   }

@@ -29,7 +29,7 @@ class MP4FileTest < Test::Unit::TestCase
 
       should "contain basic information" do
         assert_equal 1, @properties.length
-        assert_equal 54, @properties.bitrate
+        assert_equal 55, @properties.bitrate
         assert_equal 44100, @properties.sample_rate
         # The test file is mono, this appears to be a TagLib bug
         assert_equal 2, @properties.channels

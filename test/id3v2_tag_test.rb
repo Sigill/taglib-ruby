@@ -44,11 +44,11 @@ class TestID3v2Tag < Test::Unit::TestCase
     end
 
     should "have nil for string attributes" do
-      assert_nil @tag.title
-      assert_nil @tag.artist
-      assert_nil @tag.album
-      assert_nil @tag.comment
-      assert_nil @tag.genre
+      assert_equal "", @tag.title
+      assert_equal "", @tag.artist
+      assert_equal "", @tag.album
+      assert_equal "", @tag.comment
+      assert_equal "", @tag.genre
     end
 
     should "have 0 for numeric attributes" do

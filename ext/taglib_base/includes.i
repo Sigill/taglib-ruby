@@ -19,7 +19,11 @@
 %{
 #include <taglib/tstring.h>
 #include <taglib/tstringlist.h>
+#include <taglib/tiostream.h>
 #include <taglib/tfile.h>
+#include <taglib/tpropertymap.h>
+
+using TagLib::IOStream;
 
 #if defined(HAVE_RUBY_ENCODING_H) && HAVE_RUBY_ENCODING_H
 # include <ruby/encoding.h>

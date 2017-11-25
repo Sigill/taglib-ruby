@@ -3,6 +3,9 @@
 #include <taglib/taglib.h>
 #include <taglib/oggfile.h>
 #include <taglib/xiphcomment.h>
+
+// To find FLAC::Picture
+using namespace TagLib;
 %}
 
 %include "../taglib_base/includes.i"
@@ -16,6 +19,10 @@
 %include <taglib/oggfile.h>
 
 %rename("contains?") TagLib::Ogg::XiphComment::contains;
+
+%ignore TagLib::Ogg::XiphComment::pictureList();
+%ignore TagLib::Ogg::XiphComment::addPicture(FLAC::Picture *);
+%ignore TagLib::Ogg::XiphComment::removePicture(FLAC::Picture *, bool);
 
 %include <taglib/xiphcomment.h>
 
